@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA275CF027E57C8F0004F362 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA275CEF27E57C8F0004F362 /* NetworkService.swift */; };
+		DA275CF227E57CA10004F362 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA275CF127E57CA10004F362 /* DataService.swift */; };
 		DA5BF87727E1DB7F00812970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5BF87627E1DB7F00812970 /* AppDelegate.swift */; };
 		DA5BF87927E1DB7F00812970 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5BF87827E1DB7F00812970 /* SceneDelegate.swift */; };
 		DA5BF87B27E1DB7F00812970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5BF87A27E1DB7F00812970 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA275CEF27E57C8F0004F362 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		DA275CF127E57CA10004F362 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		DA5BF87327E1DB7F00812970 /* VirtualTourist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualTourist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5BF87627E1DB7F00812970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA5BF87827E1DB7F00812970 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA275CEB27E57C010004F362 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA5BF87F27E1DB7F00812970 /* VirtualTourist.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DA275CEC27E57C2B0004F362 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA5BF87A27E1DB7F00812970 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DA275CED27E57C4E0004F362 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DA275CF527E57D330004F362 /* Responses */,
+				DA275CF427E57D2A0004F362 /* Requests */,
+				DA275CEF27E57C8F0004F362 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DA275CF327E57CE90004F362 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DA275CF127E57CA10004F362 /* DataService.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DA275CF427E57D2A0004F362 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		DA275CF527E57D330004F362 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
 		DA5BF86A27E1DB7F00812970 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +110,16 @@
 		DA5BF87527E1DB7F00812970 /* VirtualTourist */ = {
 			isa = PBXGroup;
 			children = (
+				DA275CF327E57CE90004F362 /* Data */,
+				DA275CED27E57C4E0004F362 /* Network */,
+				DA275CEC27E57C2B0004F362 /* Controllers */,
+				DA275CEB27E57C010004F362 /* Models */,
 				DA5BF87627E1DB7F00812970 /* AppDelegate.swift */,
 				DA5BF87827E1DB7F00812970 /* SceneDelegate.swift */,
-				DA5BF87A27E1DB7F00812970 /* ViewController.swift */,
 				DA5BF87C27E1DB7F00812970 /* Main.storyboard */,
 				DA5BF88227E1DB8200812970 /* Assets.xcassets */,
 				DA5BF88427E1DB8200812970 /* LaunchScreen.storyboard */,
 				DA5BF88727E1DB8200812970 /* Info.plist */,
-				DA5BF87F27E1DB7F00812970 /* VirtualTourist.xcdatamodeld */,
 			);
 			path = VirtualTourist;
 			sourceTree = "<group>";
@@ -141,8 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA275CF027E57C8F0004F362 /* NetworkService.swift in Sources */,
 				DA5BF88127E1DB7F00812970 /* VirtualTourist.xcdatamodeld in Sources */,
 				DA5BF87B27E1DB7F00812970 /* ViewController.swift in Sources */,
+				DA275CF227E57CA10004F362 /* DataService.swift in Sources */,
 				DA5BF87727E1DB7F00812970 /* AppDelegate.swift in Sources */,
 				DA5BF87927E1DB7F00812970 /* SceneDelegate.swift in Sources */,
 			);
