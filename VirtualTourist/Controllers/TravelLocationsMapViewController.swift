@@ -50,14 +50,20 @@ class TravelLocationsMapViewController : UIViewController, MKMapViewDelegate, UI
     
     @objc func longTapGestureHandler(_ gestureRecognizer: UIGestureRecognizer) {
         
-        let touchedScreenLocation = gestureRecognizer.location(in: self.mapView)
-        let touchedGeoLocation : CLLocationCoordinate2D = mapView.convert(touchedScreenLocation, toCoordinateFrom: self.mapView)
+        //Note: I am saving pin to core data and also refreshing the UI in .ended state.
+        //As I have organised logic accordingly.
         
-        debugPrint(touchedGeoLocation)
-        
-        DataService.shared.addPin(latitude: touchedGeoLocation.latitude, longitude: touchedGeoLocation.longitude)
-        
-        self.refresh()
+        if gestureRecognizer.state == .began {
+            // add a PIN to the map
+        } else if gestureRecognizer.state == .changed {
+            // update the PIN to the new location
+        } else if gestureRecognizer.state == .ended {
+            // Save this PIN to CoreData
+            let touchedScreenLocation = gestureRecognizer.location(in: self.mapView)
+            let touchedGeoLocation : CLLocationCoordinate2D = mapView.convert(touchedScreenLocation, toCoordinateFrom: self.mapView)
+            DataService.shared.addPin(latitude: touchedGeoLocation.latitude, longitude: touchedGeoLocation.longitude)
+            self.refresh()
+        }
     }
     
     public func refresh() {
